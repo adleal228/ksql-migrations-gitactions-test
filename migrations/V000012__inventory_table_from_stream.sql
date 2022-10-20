@@ -5,4 +5,4 @@ CREATE TABLE INVENTORY_TABLE_FROM_STREAM_58_V1 AS
     productid AS rep_productid,
     COUNT (*) AS events
   FROM INVENTORY_58_V2 WINDOW SESSION (30 SECOND)
-  GROUP BY productid;
+  GROUP BY productid, quantity, id;
