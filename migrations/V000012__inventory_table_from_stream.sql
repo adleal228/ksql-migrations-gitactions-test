@@ -7,4 +7,4 @@ CREATE TABLE INVENTORY_TABLE_FROM_STREAM_58_V1 AS
     AS_VALUE(productid) AS rep_productid,
     COUNT (*) AS events
   FROM INVENTORY_58_V2 WINDOW TUMBLING (SIZE 10 SECOND)
-  GROUP BY id;
+  GROUP BY id, AS_VALUE(quantity), AS_VALUE(productid);
