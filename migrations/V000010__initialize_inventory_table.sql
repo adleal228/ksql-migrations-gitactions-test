@@ -1,5 +1,5 @@
 CREATE TABLE INVENTORY_TABLE_58_V1 (
-  id BIGINT,
+  id BIGINT PRIMARY KEY,
   quantity BIGINT,
   productid BIGINT
 ) WITH (
