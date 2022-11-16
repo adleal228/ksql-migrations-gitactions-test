@@ -1,5 +1,5 @@
 CREATE TABLE STOCK_TABLE_COMPACT_V1 (
-  userid BIGINT VARCHAR,
+  userid VARCHAR PRIMARY KEY,
   quantity BIGINT,
   side VARCHAR,
   symbol VARCHAR,
@@ -9,11 +9,3 @@ CREATE TABLE STOCK_TABLE_COMPACT_V1 (
   kafka_topic='compact_topic_test',
   partitions=1
 );
-
- /*"quantity": 40180,
-  "side": "buy",
-  "symbol": "symbol",
-  "price": 100,
-  "account": "account",
-  "userid": "userid"
-  */
