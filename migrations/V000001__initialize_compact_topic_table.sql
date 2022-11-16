@@ -7,5 +7,6 @@ CREATE TABLE STOCK_TABLE_COMPACT_V1 (
   account VARCHAR
 ) WITH (
   kafka_topic='compact_topic_test',
-  partitions=1
+  partitions=1,
+  value_format='json'
 );
